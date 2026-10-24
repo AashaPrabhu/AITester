@@ -1,0 +1,142 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Test Plan - KAN-5</title><style>@page{size:A4;margin:16mm 14mm}body{font-family:"Segoe UI",Arial,sans-serif;font-size:10.5pt;color:#1f2933;line-height:1.45}
+h1{font-size:20pt;color:#0b3d91;border-bottom:3px solid #0b3d91;padding-bottom:6px}h2{font-size:14pt;color:#0b3d91;margin-top:22px;border-bottom:1px solid #c9d3e3;padding-bottom:3px;page-break-after:avoid}
+h3{font-size:12pt;color:#244a7a;page-break-after:avoid}table{border-collapse:collapse;width:100%;margin:8px 0 14px;font-size:9pt;page-break-inside:auto}
+th{background:#0b3d91;color:#fff;text-align:left;padding:5px 6px}td{border:1px solid #d5dbe5;padding:4px 6px;vertical-align:top}tr{page-break-inside:avoid}tbody tr:nth-child(even){background:#f4f6fa}
+blockquote{background:#fff7e6;border-left:4px solid #f0a500;margin:10px 0;padding:8px 12px}code{background:#eef1f6;padding:0 3px;border-radius:3px;font-size:9pt}hr{border:0;border-top:1px solid #d5dbe5;margin:18px 0}
+h2:last-of-type{color:#a11}</style></head><body><h1>Test Plan — KAN-5: Test plan creation</h1>
+<blockquote>Status: <strong>DRAFT — pending human review.</strong> Not approved until a QA owner signs off.</blockquote>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Jira key</td><td>KAN-5</td></tr><tr><td>Summary</td><td>Test plan creation</td></tr><tr><td>Issue type</td><td>Bug <em>(see Gap #3)</em></td></tr><tr><td>Priority</td><td>Medium</td></tr><tr><td>Status</td><td>To Do</td></tr><tr><td>Reporter</td><td>aasha rani</td></tr><tr><td>Assignee</td><td>Unassigned</td></tr><tr><td>Components / Labels / Fix version</td><td>None</td></tr><tr><td>Linked issues / Attachments / Comments</td><td>None</td></tr><tr><td>Plan drafted</td><td>2026-10-14</td></tr></tbody></table>
+<blockquote>⚠️ <strong>Read this first:</strong> The body of KAN-5 is an <strong>unfilled template</strong>. The feature name (<code>[Feature Name]</code>), the in-scope components and the out-of-scope items are still placeholder text. This draft therefore plans testing <strong>of the ticket's own deliverables</strong> (the test-planning work and its acceptance criteria) and lays out a <strong>testing strategy framework</strong> for the release. Feature-level test scenarios <strong>cannot be written</strong> until the author fills in the placeholders. Nothing below was invented to fill those gaps.</blockquote>
+<hr>
+<h2>1. Scope &amp; Objectives</h2>
+<ul>
+<li><strong>In scope (as written in the ticket):</strong>
+<ul>
+<li>A formal Test Plan document, linked to KAN-5 or published in Confluence.</li>
+<li>A high-level list of the test environments and test data the release needs.</li>
+<li>A risk mitigation plan for likely testing blockers.</li>
+<li>A definition of testing types: manual, automated, regression, E2E, integration and security (performance is named in the Background).</li>
+<li>Placeholder Test Execution tickets, or Zephyr/Xray folders.</li>
+<li>Stakeholder review and sign-off by the Product Manager and the Lead Developer.</li>
+</ul>
+<li><strong>In scope (feature under test):</strong> ❌ <strong>Not defined.</strong> The ticket still reads "[List key components, e.g., the new payment gateway API, user profile UI updates]".</li>
+<li><strong>Out of scope:</strong> ❌ <strong>Not defined.</strong> The ticket still reads "[e.g., Load testing for legacy modules not touched in this release]". Until this is filled in, the following are treated as out of scope:
+<ul>
+<li>Writing detailed test cases or automation scripts. The skill requires plan approval first.</li>
+<li>Running any tests.</li>
+</ul>
+<li><strong>Objective:</strong> KAN-5 counts as "tested" when each of its five acceptance criteria can be shown as met:
+<ol>
+<li>The plan exists and is linked.</li>
+<li>Strategy and testing types are defined.</li>
+<li>Environments and data are identified.</li>
+<li>The PM and Lead Developer have approved it.</li>
+<li>Execution placeholders exist.</li>
+</ol>
+</ul>
+<p>  Each criterion must also trace to the release's real feature scope, which is not known yet.</p>
+<hr>
+<h2>2. Gaps &amp; Questions for the author</h2>
+<h3>2a. Requirement checklist results</h3>
+<table><thead><tr><th>Checklist item</th><th>Result</th><th>Note</th></tr></thead><tbody><tr><td>Clear user story / goal</td><td>⚠️</td><td>The goal ("prepare a test plan") is clear, but the feature it serves is a placeholder</td></tr><tr><td>Acceptance criteria are testable</td><td>⚠️</td><td>AC1, AC4 and AC5 are observable. AC2 ("clearly defined") and AC3 ("identified") are subjective</td></tr><tr><td>Happy path described</td><td>⚠️</td><td>The sub-task flow (Draft → Env analysis → Review → Sign-off) is given. The feature's happy path is missing</td></tr><tr><td>Negative / error paths</td><td>❌</td><td>Nothing is said about what happens if review is rejected or the environment is unavailable</td></tr><tr><td>Boundary &amp; empty states</td><td>❌</td><td>Not applicable until the feature is known</td></tr><tr><td>State transitions / workflow</td><td>⚠️</td><td>The sub-tasks are "Optional", and no Jira workflow states are tied to them</td></tr><tr><td>Required test data</td><td>❌</td><td>Requested as an output, but no data domains are hinted at</td></tr><tr><td>Environment / config / flags</td><td>❌</td><td>None named ("devices, browsers, or sandbox accounts" is generic)</td></tr><tr><td>External dependencies</td><td>⚠️</td><td>Zephyr/Xray and Confluence are mentioned, but which one is used is not confirmed</td></tr><tr><td>Preconditions / setup</td><td>❌</td><td>None stated</td></tr><tr><td>Performance / load</td><td>⚠️</td><td>Named as a requirement, but no targets (SLA, TPS, p95) are given</td></tr><tr><td>Security / authorization</td><td>⚠️</td><td>Named, with no roles, threat areas or compliance needs</td></tr><tr><td>Accessibility (a11y)</td><td>❌</td><td>Not mentioned</td></tr><tr><td>i18n / l10n</td><td>❌</td><td>Not mentioned</td></tr><tr><td>Audit / logging / observability</td><td>❌</td><td>Not mentioned</td></tr><tr><td>Regression surface</td><td>⚠️</td><td>"Regression" is listed as a test type, but the impacted modules are not</td></tr><tr><td>Backward compatibility / migration</td><td>❌</td><td>Not mentioned</td></tr><tr><td>Mobile / browser matrix</td><td>⚠️</td><td>"Devices, browsers" is mentioned, but no matrix is given</td></tr><tr><td>Rollback / feature-flag behavior</td><td>❌</td><td>Not mentioned</td></tr><tr><td>No ambiguous wording</td><td>⚠️</td><td>"comprehensive", "clearly defined", "potential testing blockers"</td></tr><tr><td>Terms defined consistently</td><td>⚠️</td><td>"Test Execution tickets" and "Zephyr/Xray folders" are offered as alternatives with no decision</td></tr><tr><td>Mockups / designs linked</td><td>❌</td><td>No attachments or links</td></tr></tbody></table>
+<h3>2b. Questions for the author</h3>
+<table><thead><tr><th>#</th><th>Area</th><th>Finding (⚠️/❌)</th><th>Question to author</th></tr></thead><tbody><tr><td>1</td><td>Scope</td><td>❌ <code>[Feature Name]</code> is a placeholder</td><td>What feature or release is this test plan for? Is there an epic, PRD or fix version to link?</td></tr><tr><td>2</td><td>Scope</td><td>❌ In-scope and out-of-scope lists are placeholders</td><td>Which components, APIs and screens are changing? What is explicitly excluded?</td></tr><tr><td>3</td><td>Ticket hygiene</td><td>⚠️ Issue type is <strong>Bug</strong></td><td>Should this be a Task or Story? A test-planning activity filed as a Bug will distort defect metrics.</td></tr><tr><td>4</td><td>Ownership</td><td>❌ Unassigned, no sprint or fix version</td><td>Who owns this, which sprint is it in, and what is the release date that "before development concludes" refers to?</td></tr><tr><td>5</td><td>Deliverable location</td><td>⚠️ "Linked to Jira <strong>or</strong> Confluence"</td><td>Where should the approved plan live: a Confluence space, a Jira attachment, or the repo?</td></tr><tr><td>6</td><td>Tooling</td><td>⚠️ "Test Execution tickets <strong>or</strong> Zephyr/Xray folders"</td><td>Which test-management tool is licensed on this Jira site? Is Zephyr or Xray actually installed?</td></tr><tr><td>7</td><td>Non-functional</td><td>⚠️ Performance named, no targets</td><td>What are the performance targets (response time, throughput, concurrent users)? Is there a baseline?</td></tr><tr><td>8</td><td>Non-functional</td><td>⚠️ Security named, no detail</td><td>What security scope applies: authn/authz roles, OWASP Top 10, PCI/PII, pen-test?</td></tr><tr><td>9</td><td>Non-functional</td><td>❌ a11y, i18n and logging not mentioned</td><td>Are WCAG 2.x AA, localization or audit logging needed for this release?</td></tr><tr><td>10</td><td>Environments</td><td>❌ None named</td><td>Which environments exist (Dev/QA/Staging/UAT)? Are there sandbox or third-party accounts? Who provisions them, and how long does that take?</td></tr><tr><td>11</td><td>Test data</td><td>❌ None named</td><td>Can production-like data be used, or must it be synthetic or masked? Are there data privacy constraints?</td></tr><tr><td>12</td><td>Browser/device</td><td>⚠️ Generic mention</td><td>What is the supported browser, OS and device matrix?</td></tr><tr><td>13</td><td>Approval</td><td>⚠️ "PM and Lead Developer approved"</td><td>Who are the named PM and Lead Developer? How is approval recorded (Jira comment, Confluence page approval, sign-off field)?</td></tr><tr><td>14</td><td>Automation</td><td>⚠️ "automated" listed</td><td>Which framework and CI pipeline will run the automated and regression suites? What coverage is expected?</td></tr><tr><td>15</td><td>Rollback</td><td>❌ Not mentioned</td><td>Is the feature behind a feature flag? Does rollback need to be tested?</td></tr><tr><td>16</td><td>Exit quality bar</td><td>❌ Not stated</td><td>What defect thresholds allow release (for example, 0 open P0/P1)?</td></tr></tbody></table>
+<hr>
+<h2>3. Test Scenarios</h2>
+<p>Feature-level scenarios are <strong>blocked by Gaps #1 and #2</strong>. The scenarios below verify KAN-5's own acceptance criteria and deliverables. Each one traces to a stated AC, deliverable (D1–D3) or gap.</p>
+<p><strong>Acceptance criteria referenced:</strong></p>
+<ul>
+<li>AC1: The plan is drafted and attached or linked.</li>
+<li>AC2: Scope, strategy and testing types are defined.</li>
+<li>AC3: Environments and test data are identified.</li>
+<li>AC4: The PM and Lead Developer have approved the plan.</li>
+<li>AC5: Execution placeholders are created.</li>
+</ul>
+<table><thead><tr><th>ID</th><th>Priority</th><th>Type</th><th>Scenario</th><th>Maps to</th></tr></thead><tbody><tr><td>TS-1</td><td>P0</td><td>Positive</td><td>The Test Plan document exists and is reachable from KAN-5 (attachment or link). Opening the link as a project member shows the document.</td><td>AC1, D1</td></tr><tr><td>TS-2</td><td>P0</td><td>Negative</td><td>A user who is not a project member opens the linked plan. Access follows the intended visibility, with no broken link or permission wall for stakeholders.</td><td>AC1, Gap 5</td></tr><tr><td>TS-3</td><td>P0</td><td>Positive</td><td>The plan names a real feature and lists in-scope and out-of-scope components. No <code>[placeholder]</code> text remains.</td><td>AC2, Gaps 1–2</td></tr><tr><td>TS-4</td><td>P0</td><td>Positive</td><td>The plan defines each testing type (manual, automated, regression, E2E, integration, security, performance), with an owner and approach for each.</td><td>AC2, Sub-task 1</td></tr><tr><td>TS-5</td><td>P1</td><td>Negative</td><td>A testing type named in the ticket (performance, security) has measurable targets in the plan, not just its name. The scenario fails if the targets are missing.</td><td>AC2, Gaps 7–8</td></tr><tr><td>TS-6</td><td>P0</td><td>Positive</td><td>The plan lists each test environment with its purpose, its owner and whether it is available.</td><td>AC3, D2, Gap 10</td></tr><tr><td>TS-7</td><td>P1</td><td>Positive</td><td>The plan lists required test data with its source (synthetic, masked or seeded) and a refresh method.</td><td>AC3, D2, Gap 11</td></tr><tr><td>TS-8</td><td>P1</td><td>Boundary</td><td>The environment list covers the full browser/device matrix: at least the minimum and maximum supported versions and one mobile viewport.</td><td>AC3, Gap 12</td></tr><tr><td>TS-9</td><td>P0</td><td>Positive</td><td>The risk mitigation plan lists at least one blocker for each area (environment, data, dependencies, schedule), each with an owner and a mitigation.</td><td>D3</td></tr><tr><td>TS-10</td><td>P0</td><td>Positive</td><td>Approval from the PM and the Lead Developer is recorded and traceable (named approver and date).</td><td>AC4, Sub-task 3–4, Gap 13</td></tr><tr><td>TS-11</td><td>P1</td><td>Negative</td><td>The review returns changes. The plan is revised, re-reviewed, and its version history shows the change. The ticket is not closed on a rejected plan.</td><td>AC4</td></tr><tr><td>TS-12</td><td>P1</td><td>Negative</td><td>Only one of the two required approvers signs off. AC4 is treated as <strong>not met</strong> and the ticket cannot move to Done.</td><td>AC4</td></tr><tr><td>TS-13</td><td>P0</td><td>Positive</td><td>Placeholder Test Execution tickets, or Zephyr/Xray folders, exist and are linked to KAN-5 or the release.</td><td>AC5, Gap 6</td></tr><tr><td>TS-14</td><td>P2</td><td>Negative</td><td>Zephyr/Xray is not installed on the site. The fallback (Jira Test Execution issue type, or a sub-task convention) is documented and used consistently.</td><td>AC5, Gap 6</td></tr><tr><td>TS-15</td><td>P1</td><td>Positive</td><td>Every scenario in the final plan traces back to an AC or a requirement. No orphaned scenarios.</td><td>AC2</td></tr><tr><td>TS-16</td><td>P2</td><td>Positive</td><td>The issue type is corrected (Bug → Task or Story), and an assignee, sprint and fix version are set.</td><td>Gaps 3–4</td></tr></tbody></table>
+<h3>3a. Release strategy framework (fill in once Gaps 1–2 are answered)</h3>
+<table><thead><tr><th>Test level / type</th><th>Purpose</th><th>Default approach</th><th>Status</th></tr></thead><tbody><tr><td>Smoke</td><td>The build is stable enough to test</td><td>Automated, runs on each deploy to QA</td><td>Ready to define</td></tr><tr><td>Functional (positive/negative/boundary)</td><td>Feature ACs are met</td><td>Manual first, then automated</td><td>❌ Blocked: no feature ACs</td></tr><tr><td>Integration / API</td><td>Contracts between the changed components</td><td>Automated API tests</td><td>❌ Blocked: components unknown</td></tr><tr><td>E2E</td><td>Critical user journeys</td><td>Automated UI tests on the browser matrix</td><td>❌ Blocked: journeys unknown</td></tr><tr><td>Regression</td><td>No breakage in neighbouring modules</td><td>Automated suite in CI</td><td>⚠️ Impacted modules unknown</td></tr><tr><td>Security</td><td>Authn/authz, input validation, OWASP</td><td>Scan plus targeted manual tests</td><td>⚠️ Scope unknown (Gap 8)</td></tr><tr><td>Performance</td><td>Meets SLAs under expected load</td><td>Load test against targets</td><td>⚠️ Targets unknown (Gap 7)</td></tr><tr><td>Accessibility / i18n</td><td>Compliance, if required</td><td>Automated a11y scan plus manual check</td><td>❓ Not stated (Gap 9)</td></tr><tr><td>UAT</td><td>Business acceptance</td><td>PM-led</td><td>⚠️ Owner unknown (Gap 13)</td></tr></tbody></table>
+<hr>
+<h2>4. Test Data &amp; Environment</h2>
+<ul>
+<li><strong>Data:</strong> ❌ <strong>Not specified in the ticket.</strong> To be defined:
+<ul>
+<li>Data domains (users, accounts, transactions, and so on).</li>
+<li>Volume for performance testing.</li>
+<li>PII handling: masked or synthetic.</li>
+<li>Seeding and reset scripts.</li>
+</ul>
+<li><strong>Environment / flags:</strong> ❌ <strong>Not specified.</strong> For each environment (Dev / QA / Staging / UAT, for example), confirm:
+<ul>
+<li>The URL.</li>
+<li>Its owner.</li>
+<li>Its data-refresh cadence.</li>
+<li>The feature flags in use.</li>
+<li>Any third-party sandbox accounts.</li>
+</ul>
+<li><strong>Tooling referenced in the ticket:</strong>
+<ul>
+<li>Jira (project KAN).</li>
+<li>Confluence (plan location).</li>
+<li>Zephyr or Xray (test management; still to be confirmed).</li>
+</ul>
+<li><strong>Roles / permissions:</strong>
+<ul>
+<li><strong>Plan approval:</strong> the Product Manager and the Lead Developer.</li>
+<li><strong>Feature-level roles:</strong> not defined, because the feature is unknown.</li>
+</ul>
+</ul>
+<hr>
+<h2>5. Risks &amp; Assumptions</h2>
+<ul>
+<li><strong>Assumptions made:</strong>
+<ul>
+<li>KAN-5 is a meta-ticket: its deliverable is the plan, not product code.</li>
+<li>The five ACs listed under "Definition of Done" are the full and authoritative acceptance criteria.</li>
+<li>The optional sub-tasks reflect the intended workflow, even though they have not been created in Jira.</li>
+<li>"Approved" means explicit, recorded approval from both named roles.</li>
+</ul>
+<li><strong>Risks:</strong></li>
+</ul>
+<table><thead><tr><th>#</th><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead><tbody><tr><td>R1</td><td>The feature scope stays undefined, so the plan cannot be finalized</td><td>High</td><td>High</td><td>Escalate Gaps 1–2 to the reporter and PM. Time-box the clarification.</td></tr><tr><td>R2</td><td>Test environments are not provisioned before development ends</td><td>Medium</td><td>High</td><td>Raise environment requests now. Identify the provisioning owner and lead time (Gap 10).</td></tr><tr><td>R3</td><td>Zephyr/Xray is not available, which blocks AC5</td><td>Medium</td><td>Medium</td><td>Confirm licensing. Agree a fallback convention (TS-14).</td></tr><tr><td>R4</td><td>Approvers are unavailable or disagree, which delays sign-off</td><td>Medium</td><td>Medium</td><td>Name the approvers and a review deadline. Book the review session early.</td></tr><tr><td>R5</td><td>Non-functional targets are missing, so performance and security testing cannot pass or fail</td><td>High</td><td>Medium</td><td>Get numeric targets (Gaps 7–8) before strategy sign-off.</td></tr><tr><td>R6</td><td>The issue is misclassified as a Bug and skews defect metrics</td><td>High</td><td>Low</td><td>Change the issue type (Gap 3).</td></tr><tr><td>R7</td><td>Test data contains real PII</td><td>Low</td><td>High</td><td>Require masked or synthetic data. Have security review the data plan.</td></tr></tbody></table>
+<hr>
+<h2>6. Entry / Exit criteria</h2>
+<ul>
+<li><strong>Entry (to start finalizing the plan):</strong>
+<ul>
+<li>Gaps 1, 2, 4 and 13 are answered: feature, scope, owner and approvers known.</li>
+<li>A requirements source exists: a PRD, epic, or stories with ACs.</li>
+<li>Development timeline and release date are known.</li>
+</ul>
+<li><strong>Exit (KAN-5 can move to Done):</strong>
+<ul>
+<li>TS-1 to TS-13 pass: all P0 and P1 scenarios above.</li>
+<li>No <code>[placeholder]</code> text remains in the plan.</li>
+<li>Approval is recorded from the PM and the Lead Developer.</li>
+<li>Execution placeholders are created and linked.</li>
+<li>All open questions are resolved, or explicitly accepted as risks by the approvers.</li>
+</ul>
+</ul>
+<hr>
+<h2>HUMAN REVIEW GATE</h2>
+<ul>
+<li><strong>I assumed:</strong>
+<ul>
+<li>KAN-5's deliverable is the test plan itself.</li>
+<li>The five DoD bullets are the complete acceptance criteria.</li>
+<li>The optional sub-tasks show the intended workflow.</li>
+<li>"Approved" means recorded approval from both the PM and the Lead Developer.</li>
+</ul>
+<li><strong>I could not confirm:</strong>
+<ul>
+<li>The feature or release under test.</li>
+<li>In-scope and out-of-scope components.</li>
+<li>Environments and test data.</li>
+<li>The test-management tool (Zephyr, Xray or neither).</li>
+<li>Non-functional targets.</li>
+<li>Approver names.</li>
+<li>Release date.</li>
+<li>Why the issue type is Bug.</li>
+</ul>
+<li><strong>Open questions blocking sign-off:</strong> Gaps <strong>#1, #2, #4, #6, #7, #8, #10, #11 and #13</strong> (see Section 2b).</li>
+<li>▶ <strong>Approve, or edit, before I write test cases / automation.</strong> Once the placeholders in KAN-5 are filled in, I can extend Section 3 with feature-level positive, negative, boundary and role-based scenarios.</li>
+</ul></body></html>
